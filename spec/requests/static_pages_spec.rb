@@ -2,6 +2,15 @@ require 'spec_helper'
 
 describe "Static pages" do
 
+	before (:all) do
+        ActiveRecord::Base.establish_connection(
+          	:adapter => "mysql2",
+  			:host => "localhost",
+  			:database => "ngs_app2_development",
+  			:username => "annerose",
+  			:password => "an2709be" )
+    end
+
 	describe "Home page" do
 
 		it "should have the h1 'NGS App 2'" do
