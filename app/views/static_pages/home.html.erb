@@ -1,2 +1,125 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title, 'Home') %>
+<h1>NGS App 2</h1>
+<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Berndt Lab</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      Research
+                      <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="portfolio.html">NGS Community</a></li>
+                  <li><a href="#">Researchers</a></li>
+				  <li><a href="#">Members</a></li>
+                </ul>
+              </li><!-- dropdown -->
+            </ul><!-- /.nav -->
+          </div><!--/.nav-collapse -->
+        </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+    </div><!-- /.navbar -->
+
+    <div class="container">
+
+      <!--  Carousel -->
+      <!--  consult Bootstrap docs at 
+            http://twitter.github.com/bootstrap/javascript.html#carousel -->
+      <div id="home_page_slider" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="item active">
+            <a href="http://www.berndtlab.pitt.edu">  <img src="assets/img/Purchased Images/dreamstime_xs_18652784.png" alt="Antennae Galaxies" />
+            </a>
+            <div class="carousel-caption">
+              <p><em>m</em>GVI</p>
+              <p><a href="http://www.berndtlab.pitt.edu">BerndtLab.edu &raquo;</a></p>
+            </div>
+          </div>
+          <div class="item">
+            <a href="http://hubblesite.org/gallery/album/entire/pr2007016e/xlarge_web/npp/128/">
+              <img src="assets/img/circos_1a.png" alt="Circos" />
+            </a>
+            <div class="carousel-caption">
+              <p>Genome Densities</p>
+              <p><a href="http://hubblesite.org/gallery/album/entire/pr2007016e/xlarge_web/npp/128/">Hubblesite.org &raquo;</a></p>
+            </div>
+          </div>
+          <div class="item">
+            <a href="http://hubblesite.org/gallery/album/entire/pr2003010i/npp/128/">
+              <img src="assets/img/echo.jpg" alt="Light Echo" />
+            </a>
+            <div class="carousel-caption">
+              <p>Light Echo From Star V838 Monocerotis</p>
+              <p><a href="http://hubblesite.org/gallery/album/entire/pr2003010i/npp/128/">Hubblesite.org &raquo;</a></p>
+            </div>
+          </div>
+          <div class="item">
+            <a href="http://hubblesite.org/gallery/album/entire/pr2006024a/xlarge_web/npp/128/">
+              <img src="assets/img/ngc5866.jpg" alt="Galaxy NGC5866" />
+            </a>
+            <div class="carousel-caption">
+              <p>Galaxy NGC 5866</p>
+              <p><a href="http://hubblesite.org/gallery/album/entire/pr2006024a/xlarge_web/npp/128/">Hubblesite.org &raquo;</a></p>
+            </div>
+          </div>
+        </div><!-- .carousel-inner -->
+        <!--  next and previous controls here
+              href values must reference the id for this carousel -->
+          <a class="carousel-control left" href="#home_page_slider" data-slide="prev">&lsaquo;</a>
+          <a class="carousel-control right" href="#home_page_slider" data-slide="next">&rsaquo;</a>
+      </div><!-- .carousel -->
+      <!-- end carousel -->
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span4">
+          <h2>Discover</h2>
+           <p>Learn how your genome differs from that of the person next to you.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <h2>Share</h2>
+           <p>Connect with people that have similar genome variation. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+       </div>
+        <div class="span4">
+          <h2>Understand</h2>
+          <p>Take your life into your hands by knowing your genome information. Understanding what predisposes us to diseases and xxx 
+			 will allow to take preventative strategies that improves the standard of living.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+      </div><!-- end row of columns -->
+
+      <hr>
+
+      <footer>
+        <p>By <a href="http://www.berndtlab.pitt.edu">BerndtLab</a> at <a href="http://www.pitt.edu/">University of Pittsburgh</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+    <!-- Bootstrap jQuery plugins compiled and minified -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.carousel').carousel({
+          interval: 4000
+        });
+      });
+    </script>
